@@ -1,0 +1,10 @@
+<div class="pages">
+  <div
+    [class.active]="page.active"
+    class="pages--page"
+    *ngFor="let page of pages | async"
+    (click)="changePage(page.page)"
+  >
+    {{ page.page }}
+  </div>
+</div>

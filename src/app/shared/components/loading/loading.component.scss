@@ -1,0 +1,16 @@
+:host {
+  .loading-container {
+    @apply py-48;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .loading {
+    @apply animate-spin rounded-full border-2 border-slate-300 border-t-transparent;
+    border-style: solid;
+    width: 3rem;
+    height: 3rem;
+  }
+}

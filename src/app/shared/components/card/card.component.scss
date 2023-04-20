@@ -1,0 +1,26 @@
+:host {
+  .card {
+    @apply bg-slate-200 rounded-md flex justify-between items-center transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer hover:shadow-lg select-none;
+    opacity: 0.7;
+    filter: grayscale(50%);
+    height: 10rem;
+    padding: 1rem 3rem;
+
+    &:hover {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+
+    &--info {
+      @apply font-medium capitalize;
+    }
+
+    &--image {
+      width: 8rem;
+
+      img {
+        @apply w-full h-full;
+      }
+    }
+  }
+}

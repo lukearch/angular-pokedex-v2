@@ -1,0 +1,11 @@
+:host {
+  @apply w-full flex justify-center items-center;
+
+  .search {
+    @apply bg-slate-400 rounded-md w-1/2 my-12 py-3 px-3;
+
+    &::placeholder {
+      @apply text-slate-200;
+    }
+  }
+}

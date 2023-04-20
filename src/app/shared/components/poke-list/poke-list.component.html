@@ -1,0 +1,5 @@
+<div #list class="poke-list" (scroll)="onScroll($event)">
+  <div class="poke-list--item" *ngFor="let pokemon of pokemons">
+    <app-card [pokemon]="pokemon"></app-card>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="home">
+  <header #header>
+    <app-search (search)="handleFilter($event)"></app-search>
+  </header>
+
+  <app-poke-list
+    *ngIf="!(filteredPokemons | async | hasItems); else filter"
+    [pokemons]="pokemons | async"
+    [headerHeight]="header.offsetHeight"
+    (reachEnd)="nextPage()"
+  ></app-poke-list>
+  <ng-template #filter>
+    <app-poke-list
+      id="filter"
+      [pokemons]="filteredPokemons | async"
+      [headerHeight]="header.offsetHeight"
+      (reachEnd)="nextPage()"
+    ></app-poke-list>
+  </ng-template>
+</div>

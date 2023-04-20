@@ -1,0 +1,22 @@
+:host {
+  .pages {
+    @apply gap-2 grid mb-10;
+    grid-template-columns: repeat(auto-fit, minmax(38px, 1fr));
+
+    &--page {
+      @apply bg-slate-400 flex items-center justify-center rounded-md text-black font-medium select-none cursor-pointer transition-all duration-300 ease-in-out;
+      width: 2.375rem;
+      height: 2.375rem;
+      opacity: 0.5;
+
+      &.active {
+        @apply bg-slate-100;
+        opacity: 1;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
